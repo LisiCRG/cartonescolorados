@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartones Colorados — Web de Premodern</title>
+
+  <!-- Logo del sitio como favicon -->
+  <link rel="icon" href="/images/logo.jpg" type="image/jpeg">
+
+  <meta name="description" content="Cartones Colorados: blog simple sobre el formato Premodern de Magic: The Gathering. Reglas, historia e imágenes.">
+</head>
+<body>
+  <header>
+    <h1>Cartones Colorados</h1>
+    <p>Web de Premodern</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="cards.html">🃏 Cartas</a></li>
+      <li><a href="decks.html">🗂️ Mazos</a></li>
+    </ul>
+  </nav>
+
+  <aside aria-label="Información adicional">
+    <!-- Espacio reservado para el logo en la cabecera lateral -->
+    <!-- #Añade imagen con este nombre a la carpeta /images -->
+    <figure>
+      <img src="images/logo.jpg" alt="Logotipo Cartones Colorados" width="240">
+      <figcaption>Cartones colorados - MTG</figcaption>
+    </figure>
+  </aside>
+
+  <main>
+    <section aria-labelledby="que-es-premodern">
+      <h2 id="que-es-premodern">¿Qué es Premodern?</h2>
+
+      <article>
+        <p>
+          Premodern es un formato comunitario de <em>Magic: The Gathering</em> que
+          celebra la era comprendida entre <strong>Cuarta Edición</strong> y <strong>Octava Edición</strong>,
+          incluyendo expansiones desde <strong>Mirage</strong> hasta <strong>Scourge</strong> y
+          los bloques y productos de aquella época (sin cartas modernas, ni sets recientes).
+          El objetivo es recuperar la sensación de juego, el ritmo y las interacciones
+          características de esos años, con una base de cartas amplia, potente y muy
+          accesible para construir mazos.
+        </p>
+
+        <p>
+          El formato utiliza las reglas actuales de Magic (pila, fases, mulligan de Londres, etc.),
+          pero la <strong>legalidad de cartas</strong> está acotada a ese periodo histórico. Existe una
+          lista de prohibidas específica para preservar la diversidad y evitar combos
+          opresivos. Premodern ofrece arquetipos clásicos como <em>Landstill</em>, <em>Reanimator</em>,
+          <em>Goblins</em>, <em>Enchantress</em>, <em>StifleNought</em> u <em>Oath</em>, y combina interacción
+          eficiente con jugabilidad técnica sin recurrir a power level contemporáneo.
+        </p>
+
+        <p>
+          Es un formato ideal para quienes disfrutan del  "Magic de verdad” con marcos clásicos,
+          costes ajustados y decisiones estratégicas profundas. Para listas legales,
+          banlist, documentación y comunidad internacional visita el sitio oficial:
+          <a href="https://premodernmagic.com/" target="_blank" rel="noopener">premodernmagic.com</a>.
+        </p>
+
+        <p>
+          Reglas resumidas:
+          <ul>
+            <li>Cartas permitidas: periodo clásico (Cuarta a Octava y expansiones de esa era).</li>
+            <li>Listado de prohibidas propio del formato que puedes ver en el elnace de premodernmagic.</li>
+            <li>Y con el sabor de siempre; 60 cartas con banquillo.</li>
+          </ul>
+        </p>
+      </article>
+    </section>
+
+    <section aria-labelledby="esto-es-premodern">
+      <h2 id="esto-es-premodern">ESTO ES PREMODERN</h2>
+      <p>
+        Una mirada rápida a su espíritu: historia del juego, cartas icónicas y el
+        ambiente de otra época. A continuación, tres imágenes ilustrativas.
+      </p>
+
+      <!-- Galería en línea: se muestran en la misma fila usando anchos relativos -->
+      <div role="list" aria-label="Galería Premodern">
+        <figure role="listitem" style="display:inline-block; width:32%; vertical-align:top; text-align:center;">
+          <img src="images/historia.jpg" alt="Historia de Magic" style="max-width:100%; height:auto;">
+          <figcaption>Historia de Magic</figcaption>
+        </figure>
+
+        <figure role="listitem" style="display:inline-block; width:32%; vertical-align:top; text-align:center;">
+          <img src="images/iconicas.jpg" alt="Cartas Icónicas" style="max-width:100%; height:auto;">
+          <figcaption>Cartas Icónicas</figcaption>
+        </figure>
+
+        <figure role="listitem" style="display:inline-block; width:32%; vertical-align:top; text-align:center;">
+          <img src="images/epoca.jpg" alt="Otra Época" style="max-width:100%; height:auto;">
+          <figcaption>Otra Época</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="video">
+      <h2 id="video">Video recomendado de los grandes Stackeados</h2>
+
+      <figure>
+        <!-- Video embebido de YouTube de mis compañeros Stakeados-->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/k-DbJXXtC9s"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <figcaption>
+          © Derechos del video a sus autores. Referencia y agradecimiento a
+          <a href="https://x.com/Stackeados" target="_blank" rel="noopener">@Stackeados</a>.
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <small>
+        <time datetime="2025-10-25">25/10/2025</time> — © Cartones Colorados. Todos los derechos reservados.
+      </small>
+    </p>
+  </footer>
+</body>
+</html>
