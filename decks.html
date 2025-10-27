@@ -5,55 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cartones Colorados — Mazos Premodern</title>
 
-  <!-- Logo del la página -->
+  <!-- Favicon -->
   <link rel="icon" href="images/logo.jpg" type="image/jpeg">
 
-  <meta name="description" content="Cartones Colorados - Sección de mazos Premodern: ejemplos de Oath, Goblins y Deadguy Ale.">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="description" content="Mazos representativos de Premodern: Oath, Goblins y Deadguy Ale.">
 </head>
-<body>
-  <header>
+<body class="site">
+  <header class="hero" id="top">
     <h1>Cartones Colorados</h1>
     <p>Web de Premodern</p>
-
   </header>
 
-  <nav aria-label="Navegación principal">
-    <ul>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list">
       <li><a href="index.html">🏠 Inicio</a></li>
       <li><a href="cards.html">🃏 Cartas</a></li>
       <li><a href="decks.html">🗂️ Mazos</a></li>
     </ul>
   </nav>
 
-  <aside aria-label="Información adicional">
-    <!-- Espacio reservado para el logo a ver si lo pongo bien -->
-    <figure>
-      <img src="images/banner.png" alt="Banner Cartones Colorados" width="10%" height="100%">
-      <figcaption>Cartones colorados - MTG</figcaption>
+  <aside class="sidebar" aria-label="Información adicional">
+    <figure class="logo-figure">
+
+      <img class="logo" src="images/logo.jpg" alt="Logotipo Cartones Colorados">
+      <figcaption>Cartones Colorados — MTG</figcaption>
     </figure>
   </aside>
 
-  <main>
-    <section aria-labelledby="intro-mazos">
+  <main id="content" class="content">
+    <section class="section-box" aria-labelledby="intro-mazos">
       <h2 id="intro-mazos">Mazos Premodern</h2>
       <article>
         <p>
           En esta sección encontrarás algunos de los mazos más representativos del formato
-          <strong>Premodern</strong>. Estos mazos reflejan la variedad y profundidad estratégica
-          de esta era del juego. Algunos se centran en combos elaborados, otros en agresión pura o
-          control total de la partida.
+          <strong>Premodern</strong>. Reflejan la variedad y profundidad estratégica de esta era:
+          desde combos elaborados hasta agresión pura y control metódico.
         </p>
         <p>
-          A continuación presentamos tres mazos clásicos del formato, muy populares en torneos y
-          mesas de juego. Cada uno destaca por un enfoque distinto y una historia interesante dentro
-          de la comunidad.
+          A continuación listamos tres mazos clásicos, muy populares en torneos y mesas de juego.
+          Cada uno destaca por un enfoque distinto y una historia particular dentro de la comunidad.
         </p>
       </article>
     </section>
 
-    <section aria-labelledby="tabla-mazos">
-      <h3 id="tabla-mazos">Listado de Mazos</h3>
-      <table border="1" cellpadding="8">
+    <section class="section-box" aria-labelledby="tabla-mazos">
+      <h2 id="tabla-mazos">Listado de Mazos</h2>
+      <table class="table-list" border="1" cellpadding="8">
         <thead>
           <tr>
             <th>Mazo</th>
@@ -81,54 +81,45 @@
       </table>
     </section>
 
-    <section aria-labelledby="mazo-oath">
-      <h3 id="oath">Oath</h3>
-      <figure>
-        <img src="images/mazo_1.jpg" alt="Mazo Oath Premodern" width="480">
+    <section class="section-box" aria-labelledby="oath">
+      <h2 id="oath">Oath</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/mazo_1.jpg" alt="Mazo Oath Premodern" width="480">
         <figcaption>Mazo Oath of Druids</figcaption>
       </figure>
       <p>
-        El mazo <strong>Oath</strong> es uno de los combos más emblemáticos del formato. 
-        Su plan consiste en utilizar <em>Oath of Druids</em> para poner en juego criaturas 
-        poderosas como <em>Akroma, Angel of Wrath</em> o <em>Spore Frog</em> en turnos muy tempranos.
-        Combina aceleradores, control y una condición de victoria explosiva, representando el
-        espíritu de los mazos de control-combo de la vieja escuela.
+        <strong>Oath</strong> es uno de los combos más emblemáticos del formato.
+        Usa <em>Oath of Druids</em> para poner en juego criaturas determinantes muy pronto,
+        combinando aceleración, control y una condición de victoria explosiva.
       </p>
     </section>
 
-    <section aria-labelledby="mazo-goblins">
-      <h3 id="goblins">Goblins</h3>
-      <figure>
-        <img src="images/mazo_2.jpg" alt="Mazo Goblins Premodern" width="480">
+    <section class="section-box" aria-labelledby="goblins">
+      <h2 id="goblins">Goblins</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/mazo_2.jpg" alt="Mazo Goblins Premodern" width="480">
         <figcaption>Mazo Goblins</figcaption>
       </figure>
       <p>
-        <strong>Goblins</strong> es el arquetipo aggro más clásico de Premodern. 
-        Utiliza criaturas tribales eficientes como <em>Goblin Lackey</em>, <em>Goblin Piledriver</em> 
-        y <em>Siege-Gang Commander</em> para presionar desde el primer turno. 
-        Su sinergia y consistencia lo convierten en un mazo agresivo y divertido, 
-        con potencial de victoria incluso frente a estrategias de control.
+        <strong>Goblins</strong> es el arquetipo aggro clásico. Criaturas tribales eficientes y
+        sinergias que permiten presionar desde el primer turno con gran consistencia.
       </p>
     </section>
 
-    <section aria-labelledby="mazo-deadguy">
-      <h3 id="deadguy">Deadguy Ale</h3>
-      <figure>
-        <img src="images/mazo_3.jpg" alt="Mazo Deadguy Ale Premodern" width="480">
+    <section class="section-box" aria-labelledby="deadguy">
+      <h2 id="deadguy">Deadguy Ale</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/mazo_3.jpg" alt="Mazo Deadguy Ale Premodern" width="480">
         <figcaption>Mazo Deadguy Ale</figcaption>
       </figure>
       <p>
-        <strong>Deadguy Ale</strong> es un mazo <em>midrange</em> que combina lo mejor de 
-        <em>White Weenie</em> y <em>Black Control</em>. Se apoya en descartes como 
-        <em>Hymn to Tourach</em> y <em>Duress</em>, junto con criaturas versátiles como 
-        <em>Hypnotic Specter</em> o <em>Nantuko Shade</em>. 
-        Equilibrado, eficiente y con respuestas sólidas para casi todo, es un ejemplo de la
-        profundidad táctica del formato Premodern.
+        <strong>Deadguy Ale</strong> mezcla descarte y presión con criaturas versátiles,
+        equilibrando recursos y respuestas para casi todo el metajuego.
       </p>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>
       <small>
         <time datetime="2025-10-26">26/10/2025</time> — © Cartones Colorados. Todos los derechos reservados.
