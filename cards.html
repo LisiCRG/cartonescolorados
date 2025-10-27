@@ -5,52 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cartones Colorados — Cartas Icónicas Premodern</title>
 
-  <!-- #Añade imagen con este nombre a la carpeta /images -->
+  <!-- Favicon -->
   <link rel="icon" href="images/logo.jpg" type="image/jpeg">
 
-  <meta name="description" content="Cartones Colorados - Cartas icónicas del formato Premodern: Terravore, Chrome Mox y Gaea's Cradle.">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <meta name="description" content="Cartas icónicas de Premodern: Terravore, Chrome Mox y Gaea's Cradle.">
 </head>
-<body>
-  <header>
+<body class="site">
+  <header class="hero" id="top">
     <h1>Cartones Colorados</h1>
     <p>Web de Premodern</p>
-
   </header>
 
-  <nav aria-label="Navegación principal">
-    <ul>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list">
       <li><a href="index.html">🏠 Inicio</a></li>
       <li><a href="cards.html">🃏 Cartas</a></li>
       <li><a href="decks.html">🗂️ Mazos</a></li>
     </ul>
   </nav>
 
-  <aside aria-label="Información adicional">
-    <figure>
-      <img src="images/banner.png" alt="Banner Cartones Colorados" width="10%" height="100%">
-      <figcaption>Cartones colorados - MTG</figcaption>
+  <aside class="sidebar" aria-label="Información adicional">
+    <figure class="logo-figure">
+
+      <img class="logo" src="images/logo.jpg" alt="Logotipo Cartones Colorados">
+      <figcaption>Cartones Colorados — MTG</figcaption>
     </figure>
   </aside>
 
-  <main>
-    <section aria-labelledby="intro-cartas">
+  <main id="content" class="content">
+    <section class="section-box" aria-labelledby="intro-cartas">
       <h2 id="intro-cartas">Cartas Icónicas de Premodern</h2>
       <article>
         <p>
-          En esta sección exploramos algunas de las <strong>cartas más representativas</strong> del formato
-          Premodern. Son cartas que definieron estrategias, marcaron épocas y siguen siendo piezas clave
-          en muchos mazos actuales del formato.
-        </p>
-        <p>
-          Estas cartas reflejan el poder, la estética y el diseño característico de la era de los años 90 y 2000,
-          cuando Magic: The Gathering estaba en plena expansión creativa y técnica.
+          Selección de <strong>cartas representativas</strong> que definieron estrategias y siguen
+          siendo piezas clave del formato: potencia, estética y diseño de la era 90s/2000.
         </p>
       </article>
     </section>
 
-    <section aria-labelledby="tabla-cartas">
-      <h3 id="tabla-cartas">Listado de Cartas</h3>
-      <table border="1" cellpadding="8">
+    <section class="section-box" aria-labelledby="tabla-cartas">
+      <h2 id="tabla-cartas">Listado de Cartas</h2>
+      <table class="table-list" border="1" cellpadding="8">
         <thead>
           <tr>
             <th>Carta</th>
@@ -65,7 +63,7 @@
             <td><a href="#terravore">Ver carta</a></td>
           </tr>
           <tr>
-            <td>Diamond Mox</td>
+            <td>Chrome Mox</td>
             <td>Artefacto</td>
             <td><a href="#chromemox">Ver carta</a></td>
           </tr>
@@ -78,55 +76,44 @@
       </table>
     </section>
 
-    <section aria-labelledby="carta-terravore">
-      <h3 id="terravore">Terravore</h3>
-      <figure>
-        <!-- #Añade imagen con este nombre a la carpeta /images -->
-        <img src="images/terravore.jpg" alt="Carta Terravore Premodern" width="300">
+    <section class="section-box" aria-labelledby="terravore">
+      <h2 id="terravore">Terravore</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/terravore.jpg" alt="Carta Terravore Premodern" width="300">
         <figcaption>Terravore — criatura símbolo del formato.</figcaption>
       </figure>
       <p>
-        <strong>Terravore</strong> es una de las criaturas más emblemáticas del formato Premodern.
-        Su poder y resistencia aumentan según las tierras en los cementerios, lo que la convierte en
-        una amenaza letal en estrategias basadas en <em>fetchlands</em> y cartas como <em>Wasteland</em>.
-        Fue pieza clave de mazos como <em>Terrageddon</em> o <em>Slide</em>, representando el equilibrio entre
-        poder natural y destrucción de recursos.
+        <strong>Terravore</strong> escala con las tierras en los cementerios, convirtiéndose en
+        amenaza letal en estrategias con <em>fetchlands</em> y <em>Wasteland</em>.
       </p>
     </section>
 
-    <section aria-labelledby="carta-chromemox">
-      <h3 id="chromemox">Diamond Mox</h3>
-      <figure>
-        <!-- #Añade imagen con este nombre a la carpeta /images -->
-        <img src="images/diamond.jpg" alt="Carta Diamond Mox Premodern" width="300">
-        <figcaption>Diamond Mox — acelerador de maná icónico.</figcaption>
+    <section class="section-box" aria-labelledby="chromemox">
+      <h2 id="chromemox">Chrome Mox</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/diamond.jpg" alt="Carta Chrome Mox Premodern" width="300">
+        <figcaption>Chrome Mox — acelerador de maná icónico.</figcaption>
       </figure>
       <p>
-        <strong>Diamond Mox</strong> ofrece una aceleración explosiva a cambio de exiliar una tierra de la mano.
-        Representa la velocidad y la eficiencia de los mazos más agresivos y combo del formato.
-        Aunque poderosa, su presencia requiere decisiones tácticas importantes, equilibrando riesgo
-        y recompensa. Aparece en mazos como <em>Oath</em> o <em>Replenish</em>.
+        <strong>Chrome Mox</strong> ofrece aceleración explosiva a cambio de exiliar una carta de la mano.
+        Representa la velocidad y eficiencia de mazos agresivos y de combo.
       </p>
     </section>
 
-    <section aria-labelledby="carta-gaia">
-      <h3 id="gaia">Gaea’s Cradle</h3>
-      <figure>
-        <!-- #Añade imagen con este nombre a la carpeta /images -->
-        <img src="images/gaia.jpg" alt="Carta Gaea's Cradle Premodern" width="300">
+    <section class="section-box" aria-labelledby="gaia">
+      <h2 id="gaia">Gaea’s Cradle</h2>
+      <figure class="card-figure">
+        <img class="card-image" src="images/gaia.jpg" alt="Carta Gaea's Cradle Premodern" width="300">
         <figcaption>Gaea’s Cradle — la tierra más poderosa del formato.</figcaption>
       </figure>
       <p>
-        <strong>Gaea’s Cradle</strong> es una tierra legendaria que genera una cantidad de maná verde igual
-        al número de criaturas que controlas. En Premodern es el corazón de estrategias <em>Elves</em>,
-        <em>Enchantress</em> y <em>Survival</em>. Su capacidad de generar maná masivo la convierte en una de las
-        cartas más buscadas y respetadas del formato. Pocas cartas simbolizan tanto el poder de la naturaleza
-        como este legendario lugar de Dominaria.
+        <strong>Gaea’s Cradle</strong> genera maná igual al número de criaturas que controlas:
+        el corazón de estrategias <em>Elves</em>, <em>Enchantress</em> y <em>Survival</em>.
       </p>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>
       <small>
         <time datetime="2025-10-26">26/10/2025</time> — © Cartones Colorados. Todos los derechos reservados.
