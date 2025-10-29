@@ -1,12 +1,11 @@
 /* ====================================================================== */
-/* Cartones Colorados - styles.css                                        */
+/* Cartones Colorados - styles.css                                         */
 /* Tipografías: Cinzel Decorative (titulares), Roboto (cuerpo)            */
 /* Paleta: Material Red + Blue Grey                                       */
-/* Cumple: reset, box-model, pseudo-clases/elementos, flex/grid,          */
-/* gradientes, background-image, transiciones, animación, responsive base */
+/* Acorde a lo que indiqué en el Excel                                    */
 /* ====================================================================== */
 
-/* --------------------------- 1) Reset básico --------------------------- */
+/* --------------------------- ¡¡RESET!! --------------------------- */
 *,
 *::before,
 *::after {
@@ -14,7 +13,6 @@
 }
 
 html {
-  /* Base 16px = 1rem; permite zoom accesible */
   font-size: 16px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -32,53 +30,13 @@ img {
   display: block;
 }
 
-/* ----------------------- 2) Fuentes (Google Fonts) --------------------- */
-/* Puedes mantenerlo aquí o mover los <link> al <head>. */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
-
-/* --------------------------- 3) Variables UI --------------------------- */
-:root{
-  /* Material Red */
-  --red-900:#B71C1C;
-  --red-800:#C62828;
-  --red-700:#D32F2F;
-  --red-600:#E53935;
-  --red-500:#F44336;
-
-  /* Blue Grey */
-  --bg-900:#263238;
-  --bg-800:#37474F;
-  --bg-700:#455A64;
-  --bg-600:#546E7A;
-  --bg-100:#CFD8DC;
-  --bg-50:#ECEFF1;
-
-  /* Texto */
-  --txt:#ECEFF1;
-  --txt-invert:#111;
-  --muted:#B0BEC5;
-
-  /* Espaciado */
-  --space-1: .5rem;   /* 8px */
-  --space-2: 1rem;    /* 16px */
-  --space-3: 1.5rem;  /* 24px */
-  --space-4: 2rem;    /* 32px */
-
-  /* Radios y sombras */
-  --radius: 12px;
-  --shadow: 0 6px 16px rgba(0,0,0,.25);
-
-  /* Dimensiones mínimas accesibles para targets */
-  --tap-size: 48px;
-}
-
-/* --------------------------- 4) Base tipográfica ----------------------- */
-body.site{
+/* --------------------------- Base de la tipografía ----------------------- */
+body.site {
   font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-  color: var(--txt);
-  background: linear-gradient(180deg, var(--bg-900), var(--bg-800));
+  color: #ECEFF1;
+  background: linear-gradient(180deg, #263238, #37474F);
   min-height: 100vh;
-  padding: var(--space-2);
+  padding: 1rem;
   animation: fadeIn .6s ease both;
 }
 
@@ -91,69 +49,66 @@ h1 { font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem); }
 h2 { font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem); }
 h3 { font-size: clamp(1.05rem, .95rem + .6vw, 1.3rem); }
 
-p { font-size: 1rem; }            /* 16px */
-small { font-size: .875rem; }     /* 14px */
+p { font-size: 1rem; }
+small { font-size: .875rem; }
 
-/* Primer H2 dentro de main destacado (pseudo-clase first-of-type) */
-main h2:first-of-type{
-  color: var(--red-500);
+/* Primer H2 dentro de main , para utilizar pseudoclases */
+main h2:first-of-type {
+  color: #F44336;
 }
 
-/* Pseudoelementos tipográficos en el primer párrafo de cada sección */
-.section-box p:first-of-type::first-line{
+/* Primer párrafo decorado */
+.section-box p:first-of-type::first-line {
   font-variant: small-caps;
   letter-spacing: .3px;
 }
 
-.section-box p:first-of-type::first-letter{
+/*Aqui he usado una combinación de pseudo-clase/elemento */
+.section-box p:first-of-type::first-letter {
   font-size: 1.6em;
   font-weight: 700;
   padding-right: .1em;
-  color: var(--red-600);
+  color: #E53935;
 }
 
-/* --------------------------- 5) Layout global -------------------------- */
-/* Grid principal: aside + contenido */
-.content{
+/* --------------------------- Layout global -------------------------- */
+.content {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-3);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-/* Caja reutilizable (box-model completo) */
-.section-box{
+.section-box {
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.08));
-  padding: var(--space-3);
-  margin-bottom: var(--space-3);
-  border: 2px solid var(--bg-700);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #455A64;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
 
-/* Puedes fijar dimensiones en alguna caja demostrando width/height */
-.section-box.demo-size{
+.section-box.demo-size {
   width: 100%;
-  min-height: 220px; /* ejemplo de height */
+  min-height: 220px;
 }
 
-/* --------------------------- 6) Header / Hero -------------------------- */
-.hero{
-  position: relative; /* posicionamiento relativo solicitado */
+/* --------------------------- Portada -------------------------- */
+.portada {
+  position: relative;
   background:
     linear-gradient(135deg, rgba(198,40,40,.9), rgba(38,50,56,.85)),
     url('../images/banner.jpg') center/cover no-repeat;
-  border-radius: var(--radius);
-  padding: var(--space-3);
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
 
-.hero h1{
+.portada h1 {
   line-height: 1.15;
 }
 
-.hero::after{
-  /* Fondo decorativo con cartas fantasma */
+.portada::after {
   content:"";
   position:absolute;
   inset:0;
@@ -167,145 +122,144 @@ main h2:first-of-type{
   border-radius: inherit;
 }
 
-/* ----------------------------- 7) Sidebar ------------------------------ */
-.sidebar{
+/* ----------------------------- Sidebar y el logo ------------------------------ */
+.sidebar {
   position: relative;
   align-self: start;
 }
 
-.logo-figure{
-  background: radial-gradient(ellipse at top left, var(--bg-700), transparent 60%),
-              radial-gradient(ellipse at bottom right, var(--red-800), transparent 60%);
-  padding: var(--space-2);
-  border: 1px solid var(--bg-700);
-  border-radius: var(--radius);
+.logo-figure {
+  background: radial-gradient(ellipse at top left, #455A64, transparent 60%),
+              radial-gradient(ellipse at bottom right, #C62828, transparent 60%);
+  padding: 1rem;
+  border: 1px solid #455A64;
+  border-radius: 12px;
 }
 
-.logo{ width: 100%; }
+.logo { width: 100%; }
 
-/* Ejemplo de float para imágenes dentro de artículos */
-.float-right{
+.float-right {
   float: right;
-  margin: 0 0 var(--space-2) var(--space-2);
+  margin: 0 0 1rem 1rem;
   width: min(45%, 320px);
 }
 
-/* ------------------------------- 8) Nav ------------------------------- */
-.main-nav{
-  margin-top: var(--space-2);
-  background: linear-gradient(180deg, var(--bg-800), var(--bg-700));
-  border: 1px solid var(--bg-700);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+/* ------------------------------- Para el Nav ------------------------------- */
+.main-nav {
+  margin-top: 1rem;
+  background: linear-gradient(180deg, #37474F, #455A64);
+  border: 1px solid #455A64;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
 
-.nav-list{
+.nav-list {
   list-style: none;
-  display: flex;                 /* contenedor flex pedido */
-  gap: var(--space-1);
-  padding: var(--space-1);
+  display: flex;
+  gap: .5rem;
+  padding: .5rem;
 }
 
-.nav-list a{
+.nav-list a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--tap-size);   /* 48px de alto mínimo */
-  padding: 0 var(--space-2);
+  min-height: 48px;
+  padding: 0 1rem;
   border-radius: 999px;
   text-decoration: none;
-  color: var(--txt);
-  background: var(--bg-700);
+  color: #ECEFF1;
+  background: #455A64;
   transition: transform .15s ease, background-color .2s ease, box-shadow .2s ease;
 }
 
-.nav-list li:first-child a{      /* :first-child */
-  background: var(--red-700);
+.nav-list li:first-child a {
+  background: #D32F2F;
 }
 
-.nav-list a:hover,               /* :hover */
-.nav-list a:focus{               /* :focus accesible */
+.nav-list a:hover,
+.nav-list a:focus {
   outline: none;
-  background: var(--red-600);
+  background: #E53935;
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(0,0,0,.35);
 }
 
-/* ---------------------------- 9) Tablas ------------------------------- */
-.table-list{
+/* ---------------------------- Las  Tablas de decks y cards------------------------------- */
+.table-list {
   width: 100%;
   border-collapse: collapse;
-  background: var(--bg-800);
-  border: 1px solid var(--bg-700);
-  border-radius: var(--radius);
+  background: #37474F;
+  border: 1px solid #455A64;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .table-list th,
-.table-list td{
+.table-list td {
   padding: .75rem 1rem;
-  border-bottom: 1px solid var(--bg-700);
+  border-bottom: 1px solid #455A64;
 }
 
-.table-list thead th{
-  background: var(--bg-700);
-  color: var(--txt);
+.table-list thead th {
+  background: #455A64;
+  color: #ECEFF1;
   text-align: left;
 }
 
-.table-list tbody tr:first-child{     /* :first-child en tbody */
+.table-list tbody tr:first-child {
   font-weight: 600;
 }
 
-.table-list tbody tr:hover{           /* :hover en filas */
+.table-list tbody tr:hover {
   background: rgba(244,67,54,.08);
 }
 
-/* --------------------------- 10) Figuras/Card -------------------------- */
-.card-figure{
+/* --------------------------- Figuras/Card de decks t cards-------------------------- */
+.card-figure {
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.08));
-  padding: var(--space-2);
-  border: 1px solid var(--bg-700);
-  border-radius: var(--radius);
+  padding: 1rem;
+  border: 1px solid #455A64;
+  border-radius: 12px;
   transition: transform .2s ease, box-shadow .2s ease;
-  margin-bottom: var(--space-3);
+  margin-bottom: 1.5rem;
 }
 
-.card-figure:hover{
+.card-figure:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 22px rgba(0,0,0,.35);
 }
 
-.card-image{
+.card-image {
   border-radius: 8px;
-  border: 2px solid var(--bg-700);
+  border: 2px solid #455A64;
 }
 
-/* --------------------------- 11) Galería 3-up ------------------------- */
-.gallery{
-  display: grid;                                   /* grid pedido */
+/* --------------------------- Galería ------------------------- */
+.gallery {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-2);
-  margin-top: var(--space-2);
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.gallery-item{
+.gallery-item {
   text-align: center;
 }
 
-/* ----------------------------- 12) Footer ------------------------------ */
-.site-footer{
-  margin-top: var(--space-4);
-  padding: var(--space-2);
-  border-top: 2px solid var(--bg-700);
-  color: var(--muted);
+/* ----------------------------- Footer ------------------------------ */
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid #455A64;
+  color: #B0BEC5;
   text-align: center;
-  background: linear-gradient(180deg, var(--bg-800), var(--bg-900));
-  border-radius: var(--radius);
+  background: linear-gradient(180deg, #37474F, #263238);
+  border-radius: 12px;
 }
 
-/* ----------------------- 13) Animación de entrada --------------------- */
-@keyframes fadeIn{
-  from{ opacity: 0; transform: translateY(6px); }
-  to  { opacity: 1; transform: translateY(0); }
+/* ----------------------- Animación de entrada que hemos visto en Animadores CSS --------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

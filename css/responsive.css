@@ -1,0 +1,74 @@
+/* ====================================================================== */
+/* Cartones Colorados - responsive.css                                    */
+/* Ajustes tal como se pide en el ejercicio:                              */
+/* con grid, flex y media queries                                         */
+/* ====================================================================== */
+
+/* --------------------------- Ajustes generales de imagenes y tabla --------------------------- */
+img, table {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Layout principal: una sola columna en móviles --- */
+@media only screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* Elimina la barra lateral */
+  }
+
+  .sidebar {
+    order: -1; /* Mueve la barra lateral arriba */
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-list a {
+    width: 100%;
+  }
+
+  .section-box {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* --- Pantallas pequeñas (<480px) siguiendo el video de S3 en función de pantallas habituales--- */
+@media only screen and (max-width: 480px) {
+  body.site {
+    padding: .5rem;
+  }
+
+  .portada {
+    padding: 1rem;
+    background-position: center;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* Galería pasa a una sola columna, como arriba*/
+  }
+
+  .table-list th,
+  .table-list td {
+    padding: .5rem;
+    font-size: .9em;
+  }
+
+  .nav-list {
+    gap: .25rem;
+  }
+}
