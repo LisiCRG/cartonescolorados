@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">   <!-- Para ajustarlo al tamaño de dispositivo, como vimos en la S3 -->
+  
   <title>Cartones Colorados — Web de Premodern</title>
 
-  <!-- Favicon (he usado ruta relativa) -->
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">   <!-- Favicon (he usado ruta relativa) -->
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Link a los estilos de CSS, con ruta relativa. -->
+  <link rel="stylesheet" href="css/responsive.css">  <!-- Link a responsive de CSS, con ruta relativa. -->
 
   <meta name="description" content="Cartones Colorados: blog simple sobre el formato Premodern de Magic: The Gathering. Reglas, historia e imágenes.">
 </head>
+
 <body class="site">
-  <header class="hero" id="top">
+  <header class="portada" id="top">
     <h1>Cartones Colorados</h1>
     <p>Web de Premodern</p>
   </header>
 
-  <nav class="main-nav" aria-label="Navegación principal">
+  <nav class="main-nav" aria-label="Navegación principal"> <!-- he utilizado una lista para los botones, ordenada, con icono . -->
     <ul class="nav-list">
       <li><a href="index.html">🏠 Inicio</a></li>
       <li><a href="cards.html">🃏 Cartas</a></li>
@@ -28,8 +31,8 @@
   </nav>
 
   <main id="content" class="content">
+
     <aside class="sidebar" aria-label="Información adicional">
-      <!-- #Añade imagen con este nombre a la carpeta /images -->
       <figure class="logo-figure">
         <img class="logo" src="images/logo.jpg" alt="Logotipo Cartones Colorados">
         <figcaption>Cartones colorados - MTG</figcaption>
@@ -98,21 +101,20 @@
         </figure>
 
         <figure class="gallery-item" role="listitem">
-          <!-- #Añade imagen con este nombre a la carpeta /images -->
           <img src="images/epoca.jpg" alt="Otra Época">
           <figcaption>Otra Época</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section-box" aria-labelledby="video">
+    <section class="section-box" aria-labelledby="video">  <!-- He usado, para el embebido a YT: https://www.w3schools.com/tags/tag_iframe.ASP -->
       <h2 id="video">Video recomendado</h2>
       <figure>
-        <iframe
+        <iframe  
           width="560"
           height="315"
           src="https://www.youtube.com/embed/k-DbJXXtC9s"
-          title="YouTube video player"
+          title="YouTube"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
@@ -123,7 +125,7 @@
         </figcaption>
       </figure>
     </section>
-  </main>
+  </main> 
 
   <footer class="footer">
     <p>
@@ -132,5 +134,7 @@
       </small>
     </p>
   </footer>
+
 </body>
+
 </html>
