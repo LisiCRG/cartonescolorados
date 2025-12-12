@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive con viewport -->
+  <title>Cartones Colorados — Contacto</title>
+
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg"> <!-- Favicon -->
+
+  <link rel="stylesheet" href="css/styles.css">       <!-- Estilos generales -->
+  <link rel="stylesheet" href="css/responsive.css">   <!-- Estilos responsive al fichero -->
+
+  <meta name="description" content="Formulario de contacto para consultas sobre Premodern, mazos, torneos y comunidad.">
+</head>
+<body class="site">
+  <header class="portada" id="top">
+    <h1>Cartones Colorados</h1>
+    <p>Web de Premodern</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list">
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="cards.html">🃏 Cartas</a></li>
+      <li><a href="decks.html">🗂️ Mazos</a></li>
+      <li><a href="contacto.html">✉️ Contacto</a></li> <!-- He añadido la nueva acción -->
+    </ul>
+  </nav>
+
+  <aside class="sidebar" aria-label="Información adicional">
+    <figure class="logo-figure">
+      <img class="logo" src="images/logo.jpg" alt="Logotipo Cartones Colorados">
+      <figcaption>Cartones Colorados — MTG</figcaption>
+    </figure>
+  </aside>
+
+  <main id="content" class="content">
+    <!-- Introducción al motivo de contacto y esta sección -->
+    <section class="section-box" aria-labelledby="intro-contacto">
+      <h2 id="intro-contacto">Contacto</h2>
+      <p>
+        Si tienes dudas sobre <strong>estrategias</strong>, construcción de <strong>mazos</strong>,
+        torneos o simplemente quieres comentar algo sobre la <strong>comunidad de Premodern</strong>,
+        puedes enviarnos tu consulta mediante este formulario.
+      </p>
+      <p>
+        Intentaremos responderte lo antes posible. Asegúrate de elegir bien el tipo de consulta
+        para poder dirigir tu mensaje a la persona adecuada. O te lanzaremos un Counterspell
+      </p>
+    </section>
+
+    <!-- Formulario de consultas -->
+    <section class="section-box" aria-labelledby="form-contacto">
+      <h2 id="form-contacto">Formulario de consultas:</h2>
+
+      <form class="contact-form" action="#" method="post" novalidate>
+        <!-- Correo electrónico -->
+        <div class="form-field">
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tucorreo@example.com"
+            required>
+        </div>
+
+        <!-- Tipo de consulta (aqui uso un desplegable) -->
+        <div class="form-field">
+          <label for="tipo-consulta">Tipo de consulta que nos quieres hacer</label>
+          <select id="tipo-consulta" name="tipo-consulta" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="estrategias">Estrategias</option>
+            <option value="mazos">Mazos</option>
+            <option value="torneos">Torneos</option>
+            <option value="comunidad">Comunidad</option>
+          </select>
+        </div>
+
+        <!-- Comentarios (he utilizado un textarea) -->
+        <div class="form-field">
+          <label for="comentarios">Comentarios</label>
+          <textarea
+            id="comentarios"
+            name="comentarios"
+            rows="5"
+            placeholder="Escribe aquí tu consulta..."
+            required></textarea>
+        </div>
+
+        <!-- Botón de envío que no hace nada, ya que no tenemos un endpoint o serv configurado -->
+        <div class="form-actions">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <small>
+        <time datetime="2025-10-26">12/12/2025</time> — © Cartones Colorados. Todos los derechos reservados.
+      </small>
+    </p>
+  </footer>
+</body>
+</html>
