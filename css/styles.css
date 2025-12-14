@@ -323,3 +323,59 @@ main h2:first-of-type {
   box-shadow: 0 4px 10px rgba(0,0,0,.35);
   transform: translateY(-1px);
 }
+
+/* --------------------------- Estilo para Mensaje formulario del JS --------------------------- */
+.form-message {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form-message.success {
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  background-color: #2E7D32;
+  color: #E8F5E9;
+}
+
+/* --------------------------- Tema alternativo para el JS --------------------------- */
+body.alt-theme {
+  background-color: #ECEFF1;
+  color: #263238;
+}
+
+body.alt-theme .section-box {
+  background-color: #FFFFFF;
+  color: #263238;
+}
+
+body.alt-theme .main-nav a {
+  background-color: #455A64;
+  color: #ECEFF1;
+}
+
+body.alt-theme .main-nav a:hover {
+  background-color: #607D8B;
+}
+
+/* Botón del menú (para que tenga el mismo look que enlaces) */
+.theme-btn {
+  width: 100%;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #455A64;
+  color: #ECEFF1;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.theme-btn:hover,
+.theme-btn:focus {
+  background: #607D8B;
+  box-shadow: 0 4px 10px rgba(0,0,0,.35);
+  transform: translateY(-1px);
+}
